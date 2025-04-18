@@ -1,0 +1,28 @@
+.avatar-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.product-card {
+    transition: transform 0.3s;
+    margin-bottom: 20px;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.category-item {
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 5px;
+}
+.category-item:hover {
+    background-color: #f8f9fa;
+}
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+    margin-top: 30px;
+}

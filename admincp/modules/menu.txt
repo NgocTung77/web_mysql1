@@ -1,0 +1,48 @@
+<div style="background-color:red;width:100%;height:1px;"></div>
+<div class="row">
+        <div class="left">
+
+            <!--input tìm kiếm-->
+            <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Tìm kiếm menu..." title="Type in a category">
+            <ul id="myMenu" class="menu">
+                <li class="menu-item"><i class="fas fa-home"></i> <a href="index.php?quanly=trangchu&ac=them">Trang chủ</a></li>
+                <li class="menu-item"><i class="fas fa-box"></i> <a href="index.php?quanly=quanlyloaisp&ac=them">Quản lí loại sản phẩm</a></li>
+                <li class="menu-item"><i class="fas fa-box-open"></i> <a href="index.php?quanly=quanlychitietsp&ac=them">Quản lí chi tiết sản phẩm</a></li>
+                <li class="menu-item"><i class="fa-solid fa-clipboard"></i> <a href="index.php?quanly=quanlydonhang&ac=them">Quản lí chi tiết đơn hàng</a></li>
+                <li class="menu-item"><i class="fa-solid fa-chart-pie"></i> <a href="index.php?quanly=thongke&ac=them">Thống kê</a></li>
+                <li class="menu-item"><i class="fa-solid fa-user"></i> <a href="index.php?quanly=quanlykhachhang&ac=them">Quản lý khách hàng</a></li>
+                <li class="menu-item"><i class="fa-solid fa-comment"></i> <a href="index.php?quanly=quanlydanhgia&ac=them">Quản lý đánh giá</a></li>
+                <li class="menu-item" onclick="toggleMenuKho()">
+                    <i class="fa-solid fa-warehouse"></i>
+                    <a href="#">Quản lý kho</a>
+                    <ul id="menuKho" class="submenu">
+                        <!-- <li><a href="index.php?quanly=quanlykho&ac=danhsach">📦 Danh sách kho</a></li> -->
+                        <li><a href="index.php?quanly=quanlykho&ac=nhaphang">⬆️ Nhập hàng</a></li>
+                        <li><a href="index.php?quanly=quanlykho&ac=xuathang">⬇️ Xuất hàng</a></li>
+                        <li><a href="index.php?quanly=quanlykho&ac=dskhohang">⬇️ Danh sách kho cần tìm</a></li>
+                    </ul>
+                </li>
+
+
+<script>
+    function toggleMenuKho() {
+        var submenu = document.getElementById("menuKho");
+        if (submenu.style.display === "none" || submenu.style.display === "") {
+            submenu.style.display = "block";
+        } else {
+            submenu.style.display = "none";
+        }
+    }
+</script>
+
+
+            </ul>
+        </div>
+
+        <div class="right">
+            <?php 
+                include('modules/content.php'); 
+                
+            ?>
+        </div>
+    </div>
